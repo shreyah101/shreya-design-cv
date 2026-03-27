@@ -1,0 +1,68 @@
+<!doctype html>
+<!--
+  ╔═══════════════════════════════════════════════════════════════╗
+  ║  Shreya Sundli — Design Portfolio                            ║
+  ║  index.html  (Vite root — lives at project root, NOT /src/)  ║
+  ╚═══════════════════════════════════════════════════════════════╝
+
+  HOW TO RUN THIS PROJECT:
+  ─────────────────────────────────────────────────────────────────
+  1. In your terminal:
+       npm create vite@latest shreya-portfolio -- --template react
+       cd shreya-portfolio && npm install
+
+  2. Install Tailwind CSS:
+       npm install -D tailwindcss postcss autoprefixer
+       npx tailwindcss init -p
+
+  3. In tailwind.config.js, set:
+       content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]
+
+  4. Replace these files with the ones from this project:
+       • index.html       → project root
+       • src/App.jsx      → replace default App.jsx
+       • src/index.css    → replace default index.css
+       • src/main.jsx     → no change needed
+
+  5. Add your images:
+       • Put all design work images in /public/images/
+       • Update image paths inside App.jsx (search for ← Replace)
+
+  6. Add your resume:
+       • Put Shreya_Sundli_Resume.pdf in /public/
+
+  7. Run: npm run dev
+  ─────────────────────────────────────────────────────────────────
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO Meta ── -->
+  <meta name="description"
+    content="Shreya Sundli - UI/UX & Visual Designer. Portfolio showcasing branding, social media, event design, and UI/UX work." />
+  <meta name="author" content="Shreya Sundli" />
+  <meta property="og:title" content="Shreya Sundli | UI/UX & Visual Designer" />
+  <meta property="og:description"
+    content="Design portfolio - branding, UI/UX, social media creatives, and motion design." />
+  <meta property="og:type" content="website" />
+
+  <!-- ── Favicon (replace with your own in /public/) ── -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- ── Google Fonts preconnect (speeds up font load) ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <title>Shreya Sundli | UI/UX &amp; Visual Designer</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- Vite injects the React bundle here automatically -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
