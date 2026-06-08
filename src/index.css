@@ -96,6 +96,7 @@ body {
 
 /* Sections Common */
 .ed-section { padding: 8rem 5%; max-width: 1400px; margin: 0 auto; position: relative;}
+@media (max-width: 768px) { .ed-section { padding: 5rem 5%; } }
 .ed-section--alt { background: var(--paper); max-width: 100%; padding-left: 5%; padding-right: 5%; }
 .ed-sec-head { margin-bottom: 4rem; position: relative; }
 .ed-label { font-family: var(--font-body); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.1em; color: var(--red); display: block; margin-bottom: 1rem; }
@@ -165,6 +166,8 @@ body {
 @media (max-width: 900px) {
   .about-grid { flex-direction: column; gap: 4rem; }
   .polaroid-col { flex: auto; max-width: 300px; margin: 0 auto; }
+  .about-editorial { font-size: 3.5rem; }
+  .about-script-a { font-size: 5.5rem; line-height: 0.8; }
 }
 
 /* Contact */
