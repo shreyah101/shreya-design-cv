@@ -3,88 +3,120 @@ import { useState, useEffect } from "react";
 // ─── PROJECT DATA ────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
+    id: 10,
+    title: "Joker: Requiem Movie Poster",
+    category: "Poster Design",
+    tag: "POSTER",
+    image: "/images/JOKER  requiem.png",
+    images: [
+      "/images/JOKER  requiem.png"
+    ],
+    accent: "#5C1318",
+    year: "2024",
+    org: "Pixelate Design Competition",
+    objective: "Create a cinematic poster for a fictional movie 'Joker: Requiem' emphasizing dark, dramatic lighting and psychological depth.",
+    tools: [
+      "Adobe Photoshop",
+      "Lightroom"
+    ],
+    outcome: "Produced a highly striking conceptual movie poster with custom typography and advanced compositing techniques."
+  },
+  {
     id: 1,
     title: "Porsche & Red Bull Motorsport Posters",
     category: "Graphic Design",
     tag: "GRAPHIC",
     image: "/images/car 2.png",
-    images: ["/images/car 2.png", "/images/car 3.png", "/images/car 4.png", "/images/car 5.png", "/images/car 6.png", "/images/car 7.png"],
+    images: [
+      "/images/car 2.png",
+      "/images/car 3.png",
+      "/images/car 4.png",
+      "/images/car 5.png",
+      "/images/car 6.png",
+      "/images/car 7.png"
+    ],
     accent: "#8FAEC4",
     year: "2024",
     org: "Personal Project",
-    objective: "Design a series of bold, high-contrast wallpapers and posters showcasing the Porsche 911 GT3 RS, Porsche GTS, and Red Bull Racing branding.",
-    tools: ["Adobe Photoshop", "Lightroom"],
-    outcome: "Created 7 premium wallpapers with custom typography, lighting effects, and motorsport aesthetics.",
+    objective: "Design a series of bold, high-contrast wallpapers and posters showcasing the Porsche 911 GT3 RS, Porsche GTS, and Red Bull Racing.",
+    tools: [
+      "Adobe Photoshop",
+      "Lightroom"
+    ],
+    outcome: "Created premium wallpapers with custom typography, lighting effects, and motorsport aesthetics."
   },
   {
-    id: 2,
-    title: "Kacheri Diaries Social Media Carousels",
-    category: "Social Media / Branding",
-    tag: "SOCIAL",
-    image: "/images/law 1.png",
-    images: ["/images/law 1.png", "/images/law 3.png", "/images/law 4.png", "/images/law 5.png"],
-    accent: "#D4A896",
+    id: 11,
+    title: "404 Mobile Error Page",
+    category: "UI/UX Design",
+    tag: "MOBILE",
+    image: "/images/404 ERROR !.png",
+    images: [
+      "/images/404 ERROR !.png"
+    ],
+    accent: "#D94A4A",
     year: "2025",
-    org: "Kacheri Diaries LLP",
-    objective: "Create thought-provoking engagement carousels for LinkedIn and Instagram asking users critical questions about justice and legal careers.",
-    tools: ["Figma", "Canva"],
-    outcome: "Designed 5 high-impact slides with uniform branding that generated substantial user discussion and shared stories.",
+    org: "Personal Project",
+    objective: "Design an engaging and creative 404 error page specifically optimized for mobile interfaces.",
+    tools: [
+      "Figma"
+    ],
+    outcome: "Created a visually pleasing error state that guides users back home smoothly."
   },
   {
-    id: 3,
-    title: "Legal Awareness: Pregnancy Termination Law",
-    category: "Social Media Campaign",
-    tag: "CAMPAIGN",
-    image: "/images/preg 1.png",
-    images: ["/images/preg 1.png", "/images/preg 2.png", "/images/preg 3.png", "/images/preg 4.png"],
-    accent: "#C4B08A",
+    id: 12,
+    title: "404 Desktop Error Page",
+    category: "UI/UX Design",
+    tag: "WEB",
+    image: "/images/THIS PAGE DOES NOT EXIST.png",
+    images: [
+      "/images/THIS PAGE DOES NOT EXIST.png"
+    ],
+    accent: "#E2A96B",
     year: "2025",
-    org: "Kacheri Diaries LLP",
-    objective: "Develop an educational Instagram carousel explaining the Supreme Court's landmark ruling on teenage pregnancy termination, highlighting personal autonomy.",
-    tools: ["Figma", "Canva"],
-    outcome: "Created a 4-slide legal awareness post that simplified complex constitutional rights for a lay audience.",
-  },
-  {
-    id: 4,
-    title: "Ayush Chandra Speaker Poster",
-    category: "Poster Design",
-    tag: "POSTER",
-    image: "/images/ayush 1.png",
-    images: ["/images/ayush 1.png"],
-    accent: "#A8C2B4",
-    year: "2024",
-    org: "Professional Branding",
-    objective: "Design clean and professional promotional posters to introduce Ayush Chandra, Co-Founder of LegalTechPolicy.com, for speaking engagements.",
-    tools: ["Figma", "Adobe Photoshop"],
-    outcome: "Delivered 2 poster variants emphasizing professional authority and clean layouts.",
+    org: "Personal Project",
+    objective: "Design a vast, empty-state 404 page for web/laptop screens that feels intentional and beautiful.",
+    tools: [
+      "Figma"
+    ],
+    outcome: "Developed an artistic web error layout emphasizing negative space and clear typography."
   },
   {
     id: 5,
-    title: "International Women's Day Creatives",
+    title: "Women's Day Creatives",
     category: "Social Media Design",
     tag: "SOCIAL",
     image: "/images/women 1.png",
-    images: ["/images/women 1.png"],
+    images: [
+      "/images/women 1.png"
+    ],
     accent: "#C49AB4",
     year: "2025",
     org: "Kacheri Diaries LLP",
-    objective: "Create expressive social media creatives for International Women's Day that celebrate female legal minds and professional milestones.",
-    tools: ["Figma", "Canva"],
-    outcome: "Produced 2 beautiful design variants aligned with the startup's visual voice.",
+    objective: "Create expressive social media creatives that celebrate female legal minds.",
+    tools: [
+      "Figma",
+      "Canva"
+    ],
+    outcome: "Produced beautiful design variants aligned with the startup's visual voice."
   },
   {
-    id: 6,
-    title: "Cloud AI & Beyond Event Poster",
-    category: "Event Poster",
-    tag: "EVENT",
-    image: "/images/vit 2.png",
-    images: ["/images/vit 2.png"],
-    accent: "#A49BC4",
-    year: "2026",
-    org: "Indian Society of Automation, VIT",
-    objective: "Design a striking, high-contrast poster to promote the 'Cloud AI and Beyond' seminar featuring an IBM speaker.",
-    tools: ["Figma", "Canva"],
-    outcome: "Designed 2 promotional variations, boosting student registrations and building event brand presence.",
+    id: 8,
+    title: "Environment Day Story",
+    category: "Social Media Design",
+    tag: "SOCIAL",
+    image: "/images/EnvDay.png",
+    images: [
+      "/images/EnvDay.png"
+    ],
+    accent: "#6BA876",
+    year: "2024",
+    org: "Pixelate Design Club",
+    objective: "Create an engaging Instagram story post for Environment Day.",
+    tools: [
+      "Figma"
+    ],
+    outcome: "Designed a visually compelling social media story graphic to raise environmental awareness."
   },
   {
     id: 7,
@@ -92,14 +124,180 @@ const PROJECTS = [
     category: "Event Poster",
     tag: "EVENT",
     image: "/images/legal 1.jpeg",
-    images: ["/images/legal 1.jpeg"],
+    images: [
+      "/images/legal 1.jpeg"
+    ],
     accent: "#C55A3A",
     year: "2025",
     org: "Masters' Union & ILTN",
     objective: "Create an official event poster for The Legal Impact Summit 2025, coordinating brand guidelines of Masters' Union, HaqSe, and ILTN.",
-    tools: ["Figma", "Adobe Illustrator"],
-    outcome: "Designed a clean, professional poster displayed online and across campus, attracting over 200 attendees.",
+    tools: [
+      "Figma",
+      "Adobe Illustrator"
+    ],
+    outcome: "Designed a clean, professional poster displayed online and across campus, attracting over 200 attendees."
   },
+  {
+    id: 9,
+    title: "IEEE Landing Page",
+    category: "UI/UX Design",
+    tag: "WEB",
+    image: "/images/IEEE website landing page.png",
+    images: [
+      "/images/IEEE website landing page.png"
+    ],
+    accent: "#3A73B8",
+    year: "2024",
+    org: "IEEE Student Branch",
+    objective: "Design a clean, professional, and tech-forward landing page interface for the IEEE student branch website.",
+    tools: [
+      "Figma",
+      "UI/UX"
+    ],
+    outcome: "Delivered a modern landing page wireframe and UI that improves user navigation and event discovery."
+  },
+  {
+    id: 13,
+    title: "Podcast Series Promos",
+    category: "Social Media Design",
+    tag: "SOCIAL",
+    image: "/images/podcast 1.png",
+    images: [
+      "/images/podcast 1.png",
+      "/images/podcast 2.png",
+      "/images/podcast 3.png"
+    ],
+    accent: "#83A2A8",
+    year: "2025",
+    org: "Kacheri Diaries LLP",
+    objective: "Design an Instagram post series promoting upcoming legal podcast episodes featuring industry guests.",
+    tools: [
+      "Figma",
+      "Canva"
+    ],
+    outcome: "Produced a cohesive 3-part promo series that unified the podcast's visual identity."
+  },
+  {
+    id: 14,
+    title: "War Legal Awareness",
+    category: "Social Media Campaign",
+    tag: "CAMPAIGN",
+    image: "/images/war 1.png",
+    images: [
+      "/images/war 1.png",
+      "/images/war 2.png",
+      "/images/war 3.png"
+    ],
+    accent: "#A84C3F",
+    year: "2025",
+    org: "Kacheri Diaries LLP",
+    objective: "Create an impactful carousel addressing the legal implications of international conflicts and wartime law.",
+    tools: [
+      "Figma"
+    ],
+    outcome: "Delivered a dramatic, thought-provoking 3-slide visual essay that resonated with legal audiences."
+  },
+  {
+    id: 15,
+    title: "Meet The Team Post",
+    category: "Social Media Design",
+    tag: "SOCIAL",
+    image: "/images/MEET.png",
+    images: [
+      "/images/MEET.png"
+    ],
+    accent: "#D6B573",
+    year: "2025",
+    org: "Kacheri Diaries LLP",
+    objective: "Design a warm, welcoming introductory post for the organization's team members.",
+    tools: [
+      "Figma",
+      "Canva"
+    ],
+    outcome: "Created an elegant profile template that highlights the team's human side while keeping the professional brand."
+  },
+  {
+    id: 2,
+    title: "Kacheri Diaries Social Media Carousels",
+    category: "Social Media / Branding",
+    tag: "SOCIAL",
+    image: "/images/law 1.png",
+    images: [
+      "/images/law 1.png",
+      "/images/law 3.png",
+      "/images/law 4.png",
+      "/images/law 5.png"
+    ],
+    accent: "#D4A896",
+    year: "2025",
+    org: "Kacheri Diaries LLP",
+    objective: "Create thought-provoking engagement carousels for LinkedIn and Instagram asking users critical questions.",
+    tools: [
+      "Figma",
+      "Canva"
+    ],
+    outcome: "Designed high-impact slides with uniform branding that generated substantial user discussion."
+  },
+  {
+    id: 3,
+    title: "Pregnancy Termination Law",
+    category: "Social Media Campaign",
+    tag: "CAMPAIGN",
+    image: "/images/preg 1.png",
+    images: [
+      "/images/preg 1.png",
+      "/images/preg 2.png",
+      "/images/preg 3.png",
+      "/images/preg 4.png"
+    ],
+    accent: "#C4B08A",
+    year: "2025",
+    org: "Kacheri Diaries LLP",
+    objective: "Develop an educational Instagram carousel explaining the Supreme Court's landmark ruling.",
+    tools: [
+      "Figma",
+      "Canva"
+    ],
+    outcome: "Created a 4-slide legal awareness post that simplified complex rights for a lay audience."
+  },
+  {
+    id: 4,
+    title: "Ayush Chandra Speaker Poster",
+    category: "Poster Design",
+    tag: "POSTER",
+    image: "/images/ayush 1.png",
+    images: [
+      "/images/ayush 1.png"
+    ],
+    accent: "#A8C2B4",
+    year: "2024",
+    org: "Professional Branding",
+    objective: "Design clean and professional promotional posters to introduce Ayush Chandra for speaking engagements.",
+    tools: [
+      "Figma",
+      "Adobe Photoshop"
+    ],
+    outcome: "Delivered poster variants emphasizing professional authority and clean layouts."
+  },
+  {
+    id: 6,
+    title: "Cloud AI Event Poster",
+    category: "Event Poster",
+    tag: "EVENT",
+    image: "/images/vit 2.png",
+    images: [
+      "/images/vit 2.png"
+    ],
+    accent: "#A49BC4",
+    year: "2026",
+    org: "Indian Society of Automation, VIT",
+    objective: "Design a striking, high-contrast poster to promote the 'Cloud AI and Beyond' seminar.",
+    tools: [
+      "Figma",
+      "Canva"
+    ],
+    outcome: "Designed promotional variations boosting student registrations."
+  }
 ];
 
 // ─── EXPERIENCE DATA ─────────────────────────────────────────────────────────
@@ -218,30 +416,24 @@ function VinylRecord() {
   );
 }
 
-// ─── PROJECT SPREAD ──────────────────────────────────────────────────────────
-function ProjectSpread({ project, index, onClick }) {
-  const isOdd = index % 2 !== 0;
+// ─── PROJECT CARD ────────────────────────────────────────────────────────────
+function ProjectCard({ project, onClick }) {
   const imgCount = project.images ? project.images.length : 1;
   return (
-    <article className={`project-spread ${isOdd ? "spread-flip" : ""} fade-up`} onClick={() => onClick(project)}>
-      <div className="spread-num" aria-hidden="true">0{index + 1}</div>
-      <div className="spread-img-col">
-        <div className="spread-img-wrap" style={{ "--proj-accent": project.accent }}>
-          <img src={project.image} alt={project.title} className="spread-img" onError={(e) => (e.target.style.display = "none")} />
-          <div className="spread-img-overlay">
-            <span>Open Project{imgCount > 1 ? ` · ${imgCount} pages` : ""} ↗</span>
-          </div>
+    <article className="project-grid-card fade-up" onClick={() => onClick(project)}>
+      <div className="card-img-wrap" style={{ "--proj-accent": project.accent }}>
+        <img src={project.image} alt={project.title} className="card-img" onError={(e) => (e.target.style.display = "none")} />
+        <div className="spread-img-overlay">
+          <span>Open Project{imgCount > 1 ? ` · ${imgCount} pages` : ""} ↗</span>
         </div>
       </div>
-      <div className="spread-info-col">
-        <span className="spread-tag">{project.tag}</span>
-        <h3 className="spread-title">{project.title}</h3>
-        <p className="spread-meta">{project.category} · {project.year}</p>
-        <p className="spread-org">{project.org}</p>
-        <p className="spread-desc">{project.objective}</p>
-        <div className="spread-tools">
-          {project.tools.map((t) => <span key={t} className="spread-tool">{t}</span>)}
+      <div className="card-info">
+        <div className="card-meta-top">
+          <span className="spread-tag">{project.tag}</span>
+          <span className="card-year">{project.year}</span>
         </div>
+        <h3 className="card-title">{project.title}</h3>
+        <p className="spread-org">{project.org}</p>
       </div>
     </article>
   );
@@ -252,6 +444,7 @@ export default function App() {
   const [activeProject, setActiveProject] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [navSolid, setNavSolid] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setNavSolid(window.scrollY > 80);
@@ -263,7 +456,9 @@ export default function App() {
     );
     document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
     return () => { window.removeEventListener("scroll", onScroll); observer.disconnect(); };
-  }, []);
+  }, [showAllProjects]); // re-run observer when projects are expanded
+
+  const displayedProjects = showAllProjects ? PROJECTS : PROJECTS.slice(0, 6);
 
   return (
     <>
@@ -290,27 +485,20 @@ export default function App() {
 
       {/* ══════════════════════════ HERO ══════════════════════════ */}
       <section className="hero-vinyl" id="hero">
-        {/* Top-left name */}
         <div className="hero-name-block">
           <p className="hero-eyebrow">Portfolio · 2026</p>
           <h1 className="hero-name">Shreya<br />Sundli</h1>
         </div>
 
-        {/* Centre vinyl stage */}
         <div className="vinyl-stage">
           <VinylRecord />
-
-          {/* Script overlay — does NOT rotate */}
           <span className="vinyl-script" aria-hidden="true">Portfolio</span>
-
-          {/* Numbered nav labels around the vinyl */}
           <a href="#work" className="vn vn-1"><small>01</small><span>Work</span></a>
           <a href="#experience" className="vn vn-2"><small>02</small><span>Experience</span></a>
           <a href="#about" className="vn vn-3"><small>03</small><span>About</span></a>
           <a href="#contact" className="vn vn-4"><small>04</small><span>Contact</span></a>
         </div>
 
-        {/* Bottom-right meta */}
         <div className="hero-meta-block">
           <p className="hero-role">UI/UX &amp; Visual Designer</p>
           <div className="hero-ctas">
@@ -330,10 +518,25 @@ export default function App() {
           <div className="ed-rule" />
         </div>
 
-        <div className="spreads-list">
-          {PROJECTS.map((p, i) => (
-            <ProjectSpread key={p.id} project={p} index={i} onClick={setActiveProject} />
+        <div className="project-grid-2x2">
+          {displayedProjects.map((p) => (
+            <ProjectCard key={p.id} project={p} onClick={setActiveProject} />
           ))}
+        </div>
+
+        <div className="view-all-wrap fade-up">
+          {!showAllProjects ? (
+            <button className="ed-btn-ghost view-all-btn" onClick={() => setShowAllProjects(true)}>
+              View All 15 Projects ↓
+            </button>
+          ) : (
+            <button className="ed-btn-fill view-all-btn" onClick={() => {
+              setShowAllProjects(false);
+              document.getElementById("work").scrollIntoView({ behavior: "smooth" });
+            }}>
+              Show Less ↑
+            </button>
+          )}
         </div>
       </section>
 
@@ -368,20 +571,12 @@ export default function App() {
 
       {/* ═══════════════════════ ABOUT ═══════════════════════════════════ */}
       <section className="ed-section about-section" id="about">
-        {/* Decorative vinyl behind about */}
         <div className="about-vinyl-deco" aria-hidden="true" />
-
         <div className="about-grid">
-          {/* Left – polaroid card */}
           <div className="polaroid-col fade-up">
             <div className="polaroid-card">
               <div className="polaroid-img-wrap">
-                <img
-                  src="/images/shreya-photo.jpeg"
-                  alt="Shreya Sundli"
-                  className="polaroid-photo"
-                  onError={(e) => (e.target.style.display = "none")}
-                />
+                <img src="/images/shreya-photo.jpeg" alt="Shreya Sundli" className="polaroid-photo" onError={(e) => (e.target.style.display = "none")} />
                 <div className="polaroid-monogram">SS</div>
               </div>
               <p className="polaroid-caption">Shreya Sundli</p>
@@ -389,7 +584,6 @@ export default function App() {
             <span className="polaroid-script" aria-hidden="true">Hello,</span>
           </div>
 
-          {/* Right – editorial text */}
           <div className="about-text-col fade-up">
             <h2 className="about-editorial">
               <em className="about-script-a">A</em><span>BOUT (ME)</span>
@@ -422,16 +616,13 @@ export default function App() {
           <h2 className="contact-script-head">
             Let's make something<br /><em>great</em> together.
           </h2>
-          <a href="mailto:shreyasundliwork@gmail.com" className="contact-email">
-            shreyasundliwork@gmail.com
-          </a>
+          <a href="mailto:shreyasundliwork@gmail.com" className="contact-email">shreyasundliwork@gmail.com</a>
           <div className="contact-links-row">
             <a href="https://linkedin.com/in/shreya-sundli-aa899a330" target="_blank" rel="noreferrer">LinkedIn ↗</a>
             <a href="mailto:shreyasundliwork@gmail.com">Email ↗</a>
             <a href="/shreya_resume.pdf" download>Resume ↓</a>
           </div>
         </div>
-        {/* Decorative pink circle */}
         <div className="contact-vinyl-deco" aria-hidden="true" />
       </section>
 
